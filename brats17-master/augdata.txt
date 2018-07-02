@@ -1,0 +1,24 @@
+[data]
+data_root       = Brats17_CBICA_ATX_1 
+
+modality_postfix      = [flair, t1, t1ce, t2]
+
+label_postfix         = seg
+
+file_postfix          = nii.gz
+
+with_ground_truth     = True
+
+batch_size            = 1
+
+data_shape            = [19, 240, 240, 4]
+
+label_shape           = [11, 240, 240, 1]
+
+label_convert_source  = [0, 1, 2, 4]
+
+label_convert_target  = [0, 1, 1, 1]
+
+batch_slice_direction = axial
+
+train_with_roi_patch  = False

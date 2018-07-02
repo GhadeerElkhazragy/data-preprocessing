@@ -1,0 +1,269 @@
+data data_root /home/gelkhazragy/Datasets/B17_Training /home/gelkhazragy/Datasets/B17_Training
+data data_names config17/train_names_all_lggx3.txt config17/train_names_all_lggx3.txt
+data modality_postfix [flair, t1, t1ce, t2] ['flair', 't1', 't1ce', 't2']
+data label_postfix seg seg
+data file_postfix nii.gz nii.gz
+data with_ground_truth True True
+data batch_size 5 5
+data data_shape [19, 64, 64, 4] [19, 64, 64, 4]
+data label_shape [11, 64, 64, 1] [11, 64, 64, 1]
+data label_convert_source [0, 1, 2, 4] [0, 1, 2, 4]
+data label_convert_target [0, 0, 0, 1] [0, 0, 0, 1]
+data batch_slice_direction axial axial
+data train_with_roi_patch True True
+data label_roi_mask [1,4] [1, 4]
+data roi_patch_margin 5 5
+network net_type MSNet MSNet
+network net_name MSNet_EN32 MSNet_EN32
+network downsample_twice False False
+network class_num 2 2
+training learning_rate 1e-3 0.001
+training decay 1e-7 1e-07
+training maximal_iteration 20000 20000
+training snapshot_iteration 5000 5000
+training start_iteration 0 0
+training test_iteration 100 100
+training test_step 10 10
+training model_pre_trained  None
+training model_save_prefix model17/msnet_en32 model17/msnet_en32
+size of predicty: Tensor("MSNet_EN32/final_pred/conv:0", shape=(5, 11, 64, 64, 2), dtype=float32)
+
+data data_root /home/gelkhazragy/Datasets/B17_Training /home/gelkhazragy/Datasets/B17_Training
+data data_names config17/train_names_all_lggx3.txt config17/train_names_all_lggx3.txt
+data modality_postfix [flair, t1, t1ce, t2] ['flair', 't1', 't1ce', 't2']
+data label_postfix seg seg
+data file_postfix nii.gz nii.gz
+data with_ground_truth True True
+data batch_size 5 5
+data data_shape [19, 64, 64, 4] [19, 64, 64, 4]
+data label_shape [11, 64, 64, 1] [11, 64, 64, 1]
+data label_convert_source [0, 1, 2, 4] [0, 1, 2, 4]
+data label_convert_target [0, 0, 0, 1] [0, 0, 0, 1]
+data batch_slice_direction coronal coronal
+data train_with_roi_patch True True
+data label_roi_mask [1,4] [1, 4]
+data roi_patch_margin 5 5
+network net_type MSNet MSNet
+network net_name MSNet_EN32cr MSNet_EN32cr
+network downsample_twice False False
+network class_num 2 2
+training learning_rate 1e-3 0.001
+training decay 1e-7 1e-07
+training maximal_iteration 20000 20000
+training snapshot_iteration 5000 5000
+training start_iteration 0 0
+training test_iteration 100 100
+training test_step 10 10
+training model_pre_trained  None
+training model_save_prefix model17/msnet_en32cr model17/msnet_en32cr
+size of predicty: Tensor("MSNet_EN32cr/final_pred/conv:0", shape=(5, 11, 64, 64, 2), dtype=float32)
+
+data data_root /home/gelkhazragy/Datasets/B17_Training /home/gelkhazragy/Datasets/B17_Training
+data data_names config17/train_names_all_lggx3.txt config17/train_names_all_lggx3.txt
+data modality_postfix [flair, t1, t1ce, t2] ['flair', 't1', 't1ce', 't2']
+data label_postfix seg seg
+data file_postfix nii.gz nii.gz
+data with_ground_truth True True
+data batch_size 5 5
+data data_shape [19, 64, 64, 4] [19, 64, 64, 4]
+data label_shape [11, 64, 64, 1] [11, 64, 64, 1]
+data label_convert_source [0, 1, 2, 4] [0, 1, 2, 4]
+data label_convert_target [0, 0, 0, 1] [0, 0, 0, 1]
+data batch_slice_direction sagittal sagittal
+data train_with_roi_patch True True
+data label_roi_mask [1,4] [1, 4]
+data roi_patch_margin 5 5
+network net_type MSNet MSNet
+network net_name MSNet_EN32sg MSNet_EN32sg
+network downsample_twice False False
+network class_num 2 2
+training learning_rate 1e-3 0.001
+training decay 1e-7 1e-07
+training maximal_iteration 20000 20000
+training snapshot_iteration 5000 5000
+training start_iteration 0 0
+training test_iteration 100 100
+training test_step 10 10
+training model_pre_trained  None
+training model_save_prefix model17/msnet_en32sg model17/msnet_en32sg
+size of predicty: Tensor("MSNet_EN32sg/final_pred/conv:0", shape=(5, 11, 64, 64, 2), dtype=float32)
+
+data data_root /home/gelkhazragy/Datasets/B17_Training /home/gelkhazragy/Datasets/B17_Training
+data data_names config17/train_names_all_lggx3.txt config17/train_names_all_lggx3.txt
+data modality_postfix [flair, t1, t1ce, t2] ['flair', 't1', 't1ce', 't2']
+data label_postfix seg seg
+data file_postfix nii.gz nii.gz
+data with_ground_truth True True
+data batch_size 5 5
+data data_shape [19, 96, 96, 4] [19, 96, 96, 4]
+data label_shape [11, 96, 96, 1] [11, 96, 96, 1]
+data label_convert_source [0, 1, 2, 4] [0, 1, 2, 4]
+data label_convert_target [0, 1, 0, 1] [0, 1, 0, 1]
+data batch_slice_direction axial axial
+data train_with_roi_patch True True
+data label_roi_mask [1,2,4] [1, 2, 4]
+data roi_patch_margin 5 5
+network net_type MSNet MSNet
+network net_name MSNet_TC32 MSNet_TC32
+network downsample_twice True True
+network class_num 2 2
+training learning_rate 1e-3 0.001
+training decay 1e-7 1e-07
+training maximal_iteration 20000 20000
+training snapshot_iteration 5000 5000
+training start_iteration 0 0
+training test_iteration 100 100
+training test_step 10 10
+training model_pre_trained  None
+training model_save_prefix model17/msnet_tc32 model17/msnet_tc32
+size of predicty: Tensor("MSNet_TC32/final_pred/conv:0", shape=(5, 11, 96, 96, 2), dtype=float32)
+
+data data_root /home/gelkhazragy/Datasets/B17_Training /home/gelkhazragy/Datasets/B17_Training
+data data_names config17/train_names_all_lggx3.txt config17/train_names_all_lggx3.txt
+data modality_postfix [flair, t1, t1ce, t2] ['flair', 't1', 't1ce', 't2']
+data label_postfix seg seg
+data file_postfix nii.gz nii.gz
+data with_ground_truth True True
+data batch_size 5 5
+data data_shape [19, 96, 96, 4] [19, 96, 96, 4]
+data label_shape [11, 96, 96, 1] [11, 96, 96, 1]
+data label_convert_source [0, 1, 2, 4] [0, 1, 2, 4]
+data label_convert_target [0, 1, 0, 1] [0, 1, 0, 1]
+data batch_slice_direction coronal coronal
+data train_with_roi_patch True True
+data label_roi_mask [1,2,4] [1, 2, 4]
+data roi_patch_margin 5 5
+network net_type MSNet MSNet
+network net_name MSNet_TC32cr MSNet_TC32cr
+network downsample_twice True True
+network class_num 2 2
+training learning_rate 1e-3 0.001
+training decay 1e-7 1e-07
+training maximal_iteration 20000 20000
+training snapshot_iteration 5000 5000
+training start_iteration 0 0
+training test_iteration 100 100
+training test_step 10 10
+training model_pre_trained  None
+training model_save_prefix model17/msnet_tc32cr model17/msnet_tc32cr
+size of predicty: Tensor("MSNet_TC32cr/final_pred/conv:0", shape=(5, 11, 96, 96, 2), dtype=float32)
+
+data data_root /home/gelkhazragy/Datasets/B17_Training /home/gelkhazragy/Datasets/B17_Training
+data data_names config17/train_names_all_lggx3.txt config17/train_names_all_lggx3.txt
+data modality_postfix [flair, t1, t1ce, t2] ['flair', 't1', 't1ce', 't2']
+data label_postfix seg seg
+data file_postfix nii.gz nii.gz
+data with_ground_truth True True
+data batch_size 5 5
+data data_shape [19, 96, 96, 4] [19, 96, 96, 4]
+data label_shape [11, 96, 96, 1] [11, 96, 96, 1]
+data label_convert_source [0, 1, 2, 4] [0, 1, 2, 4]
+data label_convert_target [0, 1, 0, 1] [0, 1, 0, 1]
+data batch_slice_direction sagittal sagittal
+data train_with_roi_patch True True
+data label_roi_mask [1,2,4] [1, 2, 4]
+data roi_patch_margin 5 5
+network net_type MSNet MSNet
+network net_name MSNet_TC32sg MSNet_TC32sg
+network downsample_twice True True
+network class_num 2 2
+training learning_rate 1e-3 0.001
+training decay 1e-7 1e-07
+training maximal_iteration 20000 20000
+training snapshot_iteration 5000 5000
+training start_iteration 0 0
+training test_iteration 100 100
+training test_step 10 10
+training model_pre_trained  None
+training model_save_prefix model17/msnet_tc32sg model17/msnet_tc32sg
+size of predicty: Tensor("MSNet_TC32sg/final_pred/conv:0", shape=(5, 11, 96, 96, 2), dtype=float32)
+
+data data_root /home/gelkhazragy/Datasets/B17_Training /home/gelkhazragy/Datasets/B17_Training
+data data_names config17/train_names_all.txt config17/train_names_all.txt
+data modality_postfix [flair, t1, t1ce, t2] ['flair', 't1', 't1ce', 't2']
+data label_postfix seg seg
+data file_postfix nii.gz nii.gz
+data with_ground_truth True True
+data batch_size 5 5
+data data_shape [19, 144, 144, 4] [19, 144, 144, 4]
+data label_shape [11, 144, 144, 1] [11, 144, 144, 1]
+data label_convert_source [0, 1, 2, 4] [0, 1, 2, 4]
+data label_convert_target [0, 1, 1, 1] [0, 1, 1, 1]
+data batch_slice_direction axial axial
+data train_with_roi_patch False False
+data label_roi_mask  None
+data roi_patch_margin  None
+network net_type MSNet MSNet
+network net_name MSNet_WT32 MSNet_WT32
+network downsample_twice True True
+network class_num 2 2
+training learning_rate 1e-3 0.001
+training decay 1e-7 1e-07
+training maximal_iteration 20000 20000
+training snapshot_iteration 5000 5000
+training start_iteration 0 0
+training test_iteration 100 100
+training test_step 10 10
+training model_pre_trained  None
+training model_save_prefix model17/msnet_wt32 model17/msnet_wt32
+size of predicty: Tensor("MSNet_WT32/final_pred/conv:0", shape=(5, 11, 144, 144, 2), dtype=float32)
+
+data data_root /home/gelkhazragy/Datasets/B17_Training /home/gelkhazragy/Datasets/B17_Training
+data data_names config17/train_names_all.txt config17/train_names_all.txt
+data modality_postfix [flair, t1, t1ce, t2] ['flair', 't1', 't1ce', 't2']
+data label_postfix seg seg
+data file_postfix nii.gz nii.gz
+data with_ground_truth True True
+data batch_size 5 5
+data data_shape [19, 144, 144, 4] [19, 144, 144, 4]
+data label_shape [11, 144, 144, 1] [11, 144, 144, 1]
+data label_convert_source [0, 1, 2, 4] [0, 1, 2, 4]
+data label_convert_target [0, 1, 1, 1] [0, 1, 1, 1]
+data batch_slice_direction coronal coronal
+data train_with_roi_patch False False
+data label_roi_mask  None
+data roi_patch_margin  None
+network net_type MSNet MSNet
+network net_name MSNet_WT32cr MSNet_WT32cr
+network downsample_twice True True
+network class_num 2 2
+training learning_rate 1e-3 0.001
+training decay 1e-7 1e-07
+training maximal_iteration 20000 20000
+training snapshot_iteration 5000 5000
+training start_iteration 0 0
+training test_iteration 100 100
+training test_step 10 10
+training model_pre_trained  None
+training model_save_prefix model17/msnet_wt32cr model17/msnet_wt32cr
+size of predicty: Tensor("MSNet_WT32cr/final_pred/conv:0", shape=(5, 11, 144, 144, 2), dtype=float32)
+
+data data_root /home/gelkhazragy/Datasets/B17_Training /home/gelkhazragy/Datasets/B17_Training
+data data_names config17/train_names_all.txt config17/train_names_all.txt
+data modality_postfix [flair, t1, t1ce, t2] ['flair', 't1', 't1ce', 't2']
+data label_postfix seg seg
+data file_postfix nii.gz nii.gz
+data with_ground_truth True True
+data batch_size 5 5
+data data_shape [19, 144, 144, 4] [19, 144, 144, 4]
+data label_shape [11, 144, 144, 1] [11, 144, 144, 1]
+data label_convert_source [0, 1, 2, 4] [0, 1, 2, 4]
+data label_convert_target [0, 1, 1, 1] [0, 1, 1, 1]
+data batch_slice_direction sagittal sagittal
+data train_with_roi_patch False False
+data label_roi_mask  None
+data roi_patch_margin  None
+network net_type MSNet MSNet
+network net_name MSNet_WT32sg MSNet_WT32sg
+network downsample_twice True True
+network class_num 2 2
+training learning_rate 1e-3 0.001
+training decay 1e-7 1e-07
+training maximal_iteration 20000 20000
+training snapshot_iteration 5000 5000
+training start_iteration 0 0
+training test_iteration 100 100
+training test_step 10 10
+training model_pre_trained  None
+training model_save_prefix model17/msnet_wt32sg model17/msnet_wt32sg
+size of predicty: Tensor("MSNet_WT32sg/final_pred/conv:0", shape=(5, 11, 144, 144, 2), dtype=float32)
